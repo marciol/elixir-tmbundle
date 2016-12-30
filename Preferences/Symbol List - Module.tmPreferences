@@ -5,14 +5,16 @@
 	<key>name</key>
 	<string>Symbol List: Module</string>
 	<key>scope</key>
-	<string>source.elixir meta.module.elixir</string>
+	<string>source.elixir meta.module.elixir, source.elixir meta.protocol.elixir</string>
 	<key>settings</key>
 	<dict>
-		<key>showInSymbolList</key>
-		<integer>1</integer>
-		<key>symbolTransformation</key>
+    <key>showInSymbolList</key>
+    <integer>1</integer>
+    <key>showInIndexedSymbolList</key>
+    <integer>1</integer>
+    <key>symbolIndexTransformation</key>
 		<string>
-		s/defmodule\s+//;
+		s/(defmodule|defprotocol)\s+//;
 		s/do//;
 		s/\s//g;
 	</string>

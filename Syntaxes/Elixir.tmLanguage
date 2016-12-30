@@ -184,6 +184,39 @@
 				</dict>
 				<dict>
 					<key>begin</key>
+					<string>^\s*(defprotocol)\b</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>keyword.control.protocol.elixir</string>
+						</dict>
+					</dict>
+					<key>end</key>
+					<string>\b(do)\b</string>
+					<key>endCaptures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>keyword.control.protocol.elixir</string>
+						</dict>
+					</dict>
+					<key>name</key>
+					<string>meta.protocol.elixir</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>match</key>
+							<string>\b[A-Z]\w*\b</string>
+							<key>name</key>
+							<string>entity.name.class.elixir</string>
+						</dict>
+					</array>
+				</dict>
+				<dict>
+					<key>begin</key>
 					<string>^\s*(def)\s+((?&gt;[a-zA-Z_]\w*(?&gt;\.|::))?(?&gt;[a-zA-Z_]\w*(?&gt;[?!]|=(?!&gt;))?|===?|&gt;[&gt;=]?|&lt;=&gt;|&lt;[&lt;=]?|[%&amp;`/\|]|\*\*?|=?~|[-+]@?|\[\]=?))((\()|\s*)</string>
 					<key>beginCaptures</key>
 					<dict>
